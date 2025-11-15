@@ -1,0 +1,443 @@
+[
+  {
+    "id": "e1",
+    "name": "Стефан Иванов",
+    "nickname": "Стеф",
+    "phone": "+359 888 111 222",
+    "email": "stefan.ivanov@example.com",
+    "role": "Tech Lead",
+    "department": "Engineering",
+    "photo": "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=640&auto=format&fit=crop",
+    "hourlyRate": 45,
+    "ratings": {
+      "skill": 92,
+      "teamwork": 88,
+      "communication": 84,
+      "reliability": 95,
+      "discipline": 90
+    },
+    "certificates": [
+      {
+        "name": "AWS CCP",
+        "issuer": "AWS",
+        "issuedOn": "2023-06-01"
+      },
+      {
+        "name": "Scrum Master",
+        "issuer": "Scrum.org",
+        "issuedOn": "2022-11-15"
+      }
+    ],
+    "address": {
+      "street": "бул. „Пример“ 2",
+      "zip": "1000",
+      "country": "BG"
+    },
+    "certificateImages": [
+      "https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?w=640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1557800636-894a64c1696f?w=640&auto=format&fit=crop"
+    ]
+  },
+  {
+    "id": "e2",
+    "name": "Беелия Петрова",
+    "nickname": "Би",
+    "phone": "+359 888 333 444",
+    "email": "beeliya.petrova@example.com",
+    "role": "Data Engineer",
+    "department": "Data",
+    "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2c?q=80&w=640&auto=format&fit=crop",
+    "hourlyRate": 40,
+    "ratings": {
+      "skill": 86,
+      "teamwork": 91,
+      "communication": 78,
+      "reliability": 89,
+      "discipline": 85
+    },
+    "certificates": [
+      {
+        "name": "GCP Architect",
+        "issuer": "Google Cloud",
+        "issuedOn": "2024-03-18"
+      }
+    ],
+    "address": {
+      "street": "ул. „Вдъхновение“ 7",
+      "zip": "4000",
+      "country": "BG"
+    },
+    "certificateImages": [
+      "https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?w=640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1557800636-894a64c1696f?w=640&auto=format&fit=crop"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Даниел Петров",
+    "nickname": "Даниел",
+    "email": "user3@simex.bg",
+    "phone": "+359 883682239",
+    "department": "ИТ",
+    "role": "Разработчик",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 40,
+    "ratings": {
+      "skill": 78,
+      "teamwork": 82,
+      "communication": 85,
+      "reliability": 82,
+      "discipline": 80
+    },
+    "photo": "https://i.pravatar.cc/240?img=4",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 4,
+    "name": "Петя Николова",
+    "nickname": "Петя",
+    "email": "user4@simex.bg",
+    "phone": "+359 884973382",
+    "department": "Качество",
+    "role": "QA инженер",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 30,
+    "ratings": {
+      "skill": 78,
+      "teamwork": 79,
+      "communication": 84,
+      "reliability": 95,
+      "discipline": 76
+    },
+    "photo": "https://i.pravatar.cc/240?img=5",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 5,
+    "name": "Симеон Симеонов",
+    "nickname": "Симеон",
+    "email": "user5@simex.bg",
+    "phone": "+359 883139724",
+    "department": "Инфраструктура",
+    "role": "DevOps",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 45,
+    "ratings": {
+      "skill": 79,
+      "teamwork": 78,
+      "communication": 90,
+      "reliability": 72,
+      "discipline": 76
+    },
+    "photo": "https://i.pravatar.cc/240?img=6",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 6,
+    "name": "Калина Тодорова",
+    "nickname": "Калина",
+    "email": "user6@simex.bg",
+    "phone": "+359 889407419",
+    "department": "Човешки ресурси",
+    "role": "HR специалист",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 30,
+    "ratings": {
+      "skill": 86,
+      "teamwork": 86,
+      "communication": 73,
+      "reliability": 74,
+      "discipline": 83
+    },
+    "photo": "https://i.pravatar.cc/240?img=7",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 7,
+    "name": "Ивайло Атанасов",
+    "nickname": "Ивайло",
+    "email": "user7@simex.bg",
+    "phone": "+359 884022423",
+    "department": "Бизнес анализ",
+    "role": "Анализатор",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 35,
+    "ratings": {
+      "skill": 88,
+      "teamwork": 89,
+      "communication": 86,
+      "reliability": 75,
+      "discipline": 72
+    },
+    "photo": "https://i.pravatar.cc/240?img=8",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 8,
+    "name": "Христина Костова",
+    "nickname": "Христина",
+    "email": "user8@simex.bg",
+    "phone": "+359 888160543",
+    "department": "Маркетинг",
+    "role": "Дизайнер",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 35,
+    "ratings": {
+      "skill": 82,
+      "teamwork": 91,
+      "communication": 65,
+      "reliability": 71,
+      "discipline": 93
+    },
+    "photo": "https://i.pravatar.cc/240?img=9",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 9,
+    "name": "Божидар Маринов",
+    "nickname": "Божидар",
+    "email": "user9@simex.bg",
+    "phone": "+359 888868328",
+    "department": "Операции",
+    "role": "Мениджър проекти",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 30,
+    "ratings": {
+      "skill": 92,
+      "teamwork": 93,
+      "communication": 76,
+      "reliability": 81,
+      "discipline": 76
+    },
+    "photo": "https://i.pravatar.cc/240?img=10",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 10,
+    "name": "Рая Иванова",
+    "nickname": "Рая",
+    "email": "user10@simex.bg",
+    "phone": "+359 885550021",
+    "department": "Данни",
+    "role": "Data Engineer",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 40,
+    "ratings": {
+      "skill": 78,
+      "teamwork": 82,
+      "communication": 81,
+      "reliability": 79,
+      "discipline": 81
+    },
+    "photo": "https://i.pravatar.cc/240?img=11",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 11,
+    "name": "Валентин Георгиев",
+    "nickname": "Валентин",
+    "email": "user11@simex.bg",
+    "phone": "+359 884558515",
+    "department": "Системи",
+    "role": "SysAdmin",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 45,
+    "ratings": {
+      "skill": 81,
+      "teamwork": 70,
+      "communication": 72,
+      "reliability": 84,
+      "discipline": 93
+    },
+    "photo": "https://i.pravatar.cc/240?img=12",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 12,
+    "name": "Анна Пенева",
+    "nickname": "Анна",
+    "email": "user12@simex.bg",
+    "phone": "+359 886961607",
+    "department": "Поддръжка",
+    "role": "Поддръжка",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 35,
+    "ratings": {
+      "skill": 70,
+      "teamwork": 72,
+      "communication": 71,
+      "reliability": 81,
+      "discipline": 73
+    },
+    "photo": "https://i.pravatar.cc/240?img=13",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 13,
+    "name": "Кирил Славов",
+    "nickname": "Кирил",
+    "email": "user13@simex.bg",
+    "phone": "+359 882533641",
+    "department": "ИТ",
+    "role": "Разработчик",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 25,
+    "ratings": {
+      "skill": 92,
+      "teamwork": 71,
+      "communication": 84,
+      "reliability": 79,
+      "discipline": 76
+    },
+    "photo": "https://i.pravatar.cc/240?img=14",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 14,
+    "name": "Станислава Петрова",
+    "nickname": "Станислава",
+    "email": "user14@simex.bg",
+    "phone": "+359 881014607",
+    "department": "Качество",
+    "role": "QA инженер",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 45,
+    "ratings": {
+      "skill": 70,
+      "teamwork": 73,
+      "communication": 83,
+      "reliability": 89,
+      "discipline": 82
+    },
+    "photo": "https://i.pravatar.cc/240?img=15",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 15,
+    "name": "Мартин Христов",
+    "nickname": "Мартин",
+    "email": "user15@simex.bg",
+    "phone": "+359 883688716",
+    "department": "Инфраструктура",
+    "role": "DevOps",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 40,
+    "ratings": {
+      "skill": 90,
+      "teamwork": 79,
+      "communication": 70,
+      "reliability": 71,
+      "discipline": 77
+    },
+    "photo": "https://i.pravatar.cc/240?img=16",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 16,
+    "name": "Катерина Лазарова",
+    "nickname": "Катерина",
+    "email": "user16@simex.bg",
+    "phone": "+359 888479344",
+    "department": "Човешки ресурси",
+    "role": "HR специалист",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 40,
+    "ratings": {
+      "skill": 83,
+      "teamwork": 84,
+      "communication": 66,
+      "reliability": 96,
+      "discipline": 85
+    },
+    "photo": "https://i.pravatar.cc/240?img=17",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 17,
+    "name": "Росен Димитров",
+    "nickname": "Росен",
+    "email": "user17@simex.bg",
+    "phone": "+359 882225966",
+    "department": "Бизнес анализ",
+    "role": "Анализатор",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 35,
+    "ratings": {
+      "skill": 91,
+      "teamwork": 94,
+      "communication": 73,
+      "reliability": 71,
+      "discipline": 79
+    },
+    "photo": "https://i.pravatar.cc/240?img=18",
+    "certificates": [
+      "ISO 9001"
+    ],
+    "certificateImages": []
+  },
+  {
+    "id": 18,
+    "name": "Вяра Стоянова",
+    "nickname": "Вяра",
+    "email": "user18@simex.bg",
+    "phone": "+359 889904713",
+    "department": "Маркетинг",
+    "role": "Дизайнер",
+    "address": "ул. Примерна 1, София",
+    "hourlyRate": 40,
+    "ratings": {
+      "skill": 92,
+      "teamwork": 93,
+      "communication": 69,
+      "reliability": 83,
+      "discipline": 74
+    },
+    "photo": "https://i.pravatar.cc/240?img=19",
+    "certificates": [
+      "Scrum"
+    ],
+    "certificateImages": []
+  }
+]
