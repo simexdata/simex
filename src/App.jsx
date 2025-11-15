@@ -3,14 +3,17 @@ import React, {useMemo, useState} from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import EmployeeList from './components/EmployeeList.jsx'
 import EmployeeCard from './components/EmployeeCard.jsx'
+import LoginScreen from './components/LoginScreen.jsx'
 import employeesSeed from './data/employees.json'
 import company from './data/company.json'
 import { exportEmployeesToXLSX } from './utils/export.js'
 function mergeOverrides(seed){try{const raw=localStorage.getItem('employeesOverrides');if(!raw)return seed;const ov=JSON.parse(raw);return seed.map(e=>({...e,...(ov[e.id]||{})}))}catch{return seed}}
 export default function App(){
+  const [loggedIn,setLoggedIn]=useState(()=>{ try{ return localStorage.getItem('loggedIn')==='1' }catch{ return false } })
   const [showDirectory, setShowDirectory] = React.useState(false);
   const [userRole, setUserRole] = React.useState('admin');
   const [currentUserId, setCurrentUserId] = React.useState('e001');
+  if(!loggedIn) return <LoginScreen onLogin={()=>setLoggedIn(true)} />;
   const [employees,setEmployees]=useState(()=>mergeOverrides(employeesSeed))
   const [query,setQuery]=useState(''); const [dept,setDept]=useState('Всички'); const [role,setRole]=useState('Всички'); const [selectedId,setSelectedId]=useState(null)
   const deptOptions=useMemo(()=>['Всички',...Array.from(new Set(employees.map(e=>e.department))).sort()], [employees])

@@ -43,5 +43,39 @@ export default function TimesheetPanel({ employee, dataset, weekStartISO, setWee
       </div>
       <div className="ts-foot"><div className="cell strong">Общо</div><div className="cell">{totals.mon}</div><div className="cell">{totals.tue}</div><div className="cell">{totals.wed}</div><div className="cell">{totals.thu}</div><div className="cell">{totals.fri}</div><div className="cell">{totals.sat}</div><div className="cell">{totals.sun}</div><div className="cell">{total}</div></div>
     </div>
+
+<div className="payslip-card" style={{marginTop:16, padding:12, border:'1px solid var(--line,#e5e7eb)', borderRadius:12}}>
+  <div className="section-title" style={{marginBottom:8}}>Седмичен пейслип</div>
+  <div className="grid-2" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
+    <div><strong>Часова ставка (лв/ч):</strong> {employee.hourlyRate?.toFixed?.(2)||0}</div>
+    <div><strong>Часова ставка (€ /ч):</strong> {eurRate?.toFixed?.(2)||0}</div>
+    <div><strong>Общо часове:</strong> {total?.toFixed?.(2)||0}</div>
+    <div><strong>Бруто:</strong> {p.gross?.toFixed?.(2)} лв</div>
+    <div><strong>Данъци:</strong> {p.taxes?.toFixed?.(2)} лв</div>
+    <div><strong>Осигуровки:</strong> {p.insurance?.toFixed?.(2)} лв</div>
+    <div><strong>Други удръжки:</strong> {other?.toFixed?.(2)} лв</div>
+    <div style={{fontWeight:600}}><strong>Нетно:</strong> {netAdj?.toFixed?.(2)} лв</div>
+  </div>
+  <div style={{display:'flex',gap:8,marginTop:10,alignItems:'center',flexWrap:'wrap'}}>
+    <label className="muted">Коефициент €/ч:</label>
+    <input className="input" type="number" step="0.01" style={{width:120}} value={eurRate} onChange={e=>{ const v=Number(e.target.value||0); setEurRate(v); try{ const ov=JSON.parse(localStorage.getItem('eurRateOverrides')||'{}'); ov[employee.id]=v; localStorage.setItem('eurRateOverrides',JSON.stringify(ov)); }catch{} }} />
+    <button className="btn ghost" onClick={()=>exportPayslipToXLSX({ ...p, eurRate, other, net: netAdj })}>Експорт в Excel</button>
+    <button className="btn ghost" onClick={()=>exportPayslipToPDF({ ...p, eurRate, other, net: netAdj })}>Експорт PDF</button>
+  </div>
+  <div style={{marginTop:12}}>
+    <div className="muted" style={{marginBottom:6}}>Удръжки (име + сума)</div>
+    <div style={{display:'grid', gap:8}}>
+      {Array.isArray(deductions)&&deductions.map((d,idx)=> (
+        <div key={idx} style={{display:'grid',gridTemplateColumns:'1fr 120px auto',gap:8}}>
+          <input className="input" placeholder="Име" value={d.label||''} onChange={e=>{ const next=[...deductions]; next[idx]={...next[idx], label:e.target.value}; setDeductions(next); try{ const all=JSON.parse(localStorage.getItem('deductions')||'{}'); all[`${employee.id}-${weekStartISO}`]=next; localStorage.setItem('deductions', JSON.stringify(all)); }catch{} }} />
+          <input className="input" type="number" step="0.01" placeholder="Сума" value={d.amount||''} onChange={e=>{ const next=[...deductions]; next[idx]={...next[idx], amount:Number(e.target.value||0)}; setDeductions(next); try{ const all=JSON.parse(localStorage.getItem('deductions')||'{}'); all[`${employee.id}-${weekStartISO}`]=next; localStorage.setItem('deductions', JSON.stringify(all)); }catch{} }} />
+          <button className="btn" onClick={()=>{ const next=deductions.filter((_,i)=>i!==idx); setDeductions(next); try{ const all=JSON.parse(localStorage.getItem('deductions')||'{}'); all[`${employee.id}-${weekStartISO}`]=next; localStorage.setItem('deductions', JSON.stringify(all)); }catch{} }}>Премахни</button>
+        </div>
+      ))}
+      <button className="btn" onClick={()=>{ const next=[...(Array.isArray(deductions)?deductions:[]), {label:'', amount:0}]; setDeductions(next); try{ const all=JSON.parse(localStorage.getItem('deductions')||'{}'); all[`${employee.id}-${weekStartISO}`]=next; localStorage.setItem('deductions', JSON.stringify(all)); }catch{} }}>+ Добави удръжка</button>
+    </div>
+  </div>
+</div>
+
 </motion.div>)
 }
